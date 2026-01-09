@@ -1,0 +1,11 @@
+{
+  "name": "highlight-tax-services",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npx esbuild api/index.ts --bundle --platform=node --format=cjs --outfile=api/handler.js --external:pg --external:bcrypt --external:bcryptjs --external:ws --external:@aws-sdk/client-s3 --external:@aws-sdk/s3-request-presigner --external:resend --external:jsonwebtoken --external:multer --external:express --external:drizzle-orm --external:drizzle-zod --external:zod --external:zod-validation-error --external:express-rate-limit --external:helmet --external:hpp --external:cookie-parser --external:dotenv --external:nanoid --external:serverless-http --minify",
+    "dev": "cd backend && npm run dev"
+  }
+}
+

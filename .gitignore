@@ -1,0 +1,96 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+/node_modules
+backend/node_modules/
+frontend/node_modules/
+**/node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.next
+/out/
+
+# production
+/build
+/dist
+/api/handler.js
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env files (NEVER commit these!)
+.env
+.env*.local
+.env.development
+.env.production
+.env.test
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# uploads (contain sensitive client documents!)
+/uploads
+/tmp
+/temp
+*.upload
+
+# database
+*.sql
+*.dump
+*.backup
+/migrations
+
+# logs (may contain sensitive information)
+logs/
+*.log
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Session files
+sessions/
+*.session
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.p12
+
+# Sensitive exports
+exports/
+*.csv
+*.xlsx
