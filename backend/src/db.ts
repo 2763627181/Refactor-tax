@@ -21,6 +21,10 @@ if (!process.env.DATABASE_URL) {
  */
 const poolConfig: pg.PoolConfig = {
   connectionString: process.env.DATABASE_URL,
+  max: parseInt(process.env.DB_POOL_MAX || '10', 10),
+  min: parseInt(process.env.DB_POOL_MIN || '2', 10),
+  idleTimeoutMillis: parseInt(process.env.DB_POOL_IDLE_TIMEOUT || '30000', 10),
+  connectionTimeoutMillis: parseInt(process.env.DB_POOL_CONNECTION_TIMEOUT || '30000', 10),
 };
 
 // Enable SSL for production/external databases (Supabase, Neon, etc.)
