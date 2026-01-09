@@ -71,6 +71,26 @@ node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 **Valor por defecto:** `http://localhost:3000`  
 **En Vercel:** `https://tu-proyecto.vercel.app`
 
+### `DB_POOL_MAX` (Opcional)
+**Tipo:** Number  
+**Valor por defecto:** `10`  
+**Descripción:** Número máximo de conexiones en el pool
+
+### `DB_POOL_MIN` (Opcional)
+**Tipo:** Number  
+**Valor por defecto:** `2`  
+**Descripción:** Número mínimo de conexiones en el pool
+
+### `DB_POOL_IDLE_TIMEOUT` (Opcional)
+**Tipo:** Number (milisegundos)  
+**Valor por defecto:** `30000` (30 segundos)  
+**Descripción:** Tiempo antes de cerrar conexión inactiva
+
+### `DB_POOL_CONNECTION_TIMEOUT` (Opcional)
+**Tipo:** Number (milisegundos)  
+**Valor por defecto:** `30000` (30 segundos)  
+**Descripción:** Tiempo máximo para establecer nueva conexión
+
 ## ⚙️ Configuración para Vercel
 
 En Vercel Dashboard → Settings → Environment Variables, agrega:
